@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    background-image: url("background_MET.jpg");
+    background-size: cover;
+    background-blend-mode: luminosity;
+    background-color: white;
+}
+
+h2{
+    color: red;
+}
+
