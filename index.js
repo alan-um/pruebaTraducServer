@@ -41,6 +41,10 @@ app.get("/translate/:clave", (req, res) => {
     res.send("Recibido->"+req.params.clave);
 });
 
+app.get("/hola", (req, res) => {
+    res.send("Qué tal??");
+});
+
 //Activamos el puerto 3000
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
