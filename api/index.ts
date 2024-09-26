@@ -1,6 +1,7 @@
 //Require del proyecto
 //const fs = require("node:fs");
 const translate = require('node-google-translate-skidz');
+const path = require('path');
 
 //URLs
 
@@ -12,20 +13,19 @@ const app = express();
 
 //Carga de archivos publicos
 app.get("/background_MET.jpg", (req, res) => {
-    res.sendFile(__dirname + "/background_MET.jpg"
-    )
+    res.sendFile(path.join(__dirname, '..', 'public', 'background_MET.jpg'));
 });
 //Carga index.html
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
 //Carga app.js
 app.get("/app.js", (req, res) => {
-    res.sendFile(__dirname + "/app.js");
+    res.sendFile(path.join(__dirname, '..', 'public', 'app.js'));
 });
 //Carga style.css
 app.get("/style.css", (req, res) => {
-    res.sendFile(__dirname + "/style.css");
+    res.sendFile(path.join(__dirname, '..', 'public', 'style.css'));
 });
 
 //Funciones del server
@@ -42,7 +42,7 @@ app.get("/translate/:clave", (req, res) => {
 });
 
 app.get("/hola", (req, res) => {
-    res.send("Qué tal??");
+    res.send("Qué tal?? - dirname:"+__dirname+"/../public");
 });
 
 //Activamos el puerto 3000
