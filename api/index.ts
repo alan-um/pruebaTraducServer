@@ -31,14 +31,14 @@ app.get("/style.css", (req, res) => {
 //Funciones del server
 app.get("/translate/:clave", (req, res) => {
     //const obj = {};
-    translate({
+    /* translate({
         text: req.params.clave,
         source: 'en',
         target: 'es'
     }, result =>
         res.send(result.translation)
-    );
-    //res.send("Recibido->"+req.params.clave);
+    ); */
+    res.send("Recibido->"+req.params.clave);
 });
 
 app.get("/hola", (req, res) => {
